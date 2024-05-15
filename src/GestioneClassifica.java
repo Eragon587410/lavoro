@@ -38,13 +38,13 @@ public class GestioneClassifica {
                         for (int j = casellaLibera-1; j > i; j--){
                             classifica[j+1] = classifica[j];
                         }
-                        classifica[i] = persona;
+                        classifica[i] = new Persona(persona);
                         trovato = true;
                     }
                     i++;
                 }
                 if (!trovato){
-                    classifica[casellaLibera] = persona;
+                    classifica[casellaLibera] = new Persona(persona);
                 }
                 casellaLibera++;
             }
